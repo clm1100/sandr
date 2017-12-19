@@ -1,18 +1,12 @@
-define(function(require, exports, module) {
-    // 引入计算模块:
-    // 加法模块
-    var sum = require('./module/sum')
-    // 减法模块
-    var abstract = require('./module/abstract')
-    // 乘法模块
-    var multiply = require('./module/multiply')
-    // 除法模块
-    var divide = require('./module/divide')
-    // 取模模块
-    var mod = require('./module/mod')
-    // 初识化模块
-    var init = require('./module/init')
-    // 构造函数+原型
+define([
+    'sum',
+    'abstract',
+    'multiply',
+    'divide',
+    'mod',
+    'init'
+], function (sum, abstract, multiply, divide, mod, init) {
+
     function Calculate(cId) {
         this.container = document.getElementById(cId);
         this.btn = this.container.getElementsByTagName('input')[2];
@@ -29,5 +23,5 @@ define(function(require, exports, module) {
     Calculate.prototype.divide = divide
     Calculate.prototype.mod = mod
 
-    module.exports = Calculate;
+    return Calculate
 });

@@ -1,6 +1,5 @@
-define(function (require, exports, module) {
-
-    module.exports = function () {
+define(function () {
+    return function () {
         // 原型方法中的this与构造函数中的this指向相同，都指向构造函数的实例
         var that = this;
         this.btn.onclick = function () {

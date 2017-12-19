@@ -1,6 +1,6 @@
-define(function (require, exports, module) {
+define(function ( ) {
 
-    module.exports = function (a, b) {
+    return function (a, b) {
         return parseInt(a) * parseInt(b);
     }
 });

@@ -11,32 +11,36 @@
     p {
         padding: 0px;
         margin: 0px;
-    }
-    
+    } 
     #container {
         width: 1000px;
         margin: auto;
     }
-    
-
-    
     #right {
         width: 300px;
         min-height: 400px;
         background: gray;
     }
     
-
-
     </style>
-    <script type="text/javascript" src="./sea.js"></script>
+    <script type="text/javascript" src="./require.min.js"></script>
     <script type="text/javascript">
-    seajs.use('./main.js', function(main) {
-    	main.showLog();
-    });
+    require.config({
+        baseUrl:'./',
+        paths:{
+            sum:            'module/sum',
+            abstract:       'module/abstract',
+            divide:         'module/divide',
+            mod:            'module/mod',
+            multiply:       'module/multiply',
+            calculate:      'calculation',
+            init:           'module/init' ,
+            main:           'main',            
+        }
+    })
+    require(['main'])
     </script>
 </head>
-
 <body>
     <div id="container">
         <div id="main">
@@ -60,5 +64,4 @@
         </div>
     </div>
 </body>
-
 </html>
