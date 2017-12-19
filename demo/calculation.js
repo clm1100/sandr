@@ -15,7 +15,7 @@ define(function(require, exports, module) {
         // 原型方法中的this与构造函数中的this指向相同，都指向构造函数的实例
         var that = this;
         this.btn.onclick = function() {
-            // 事件方法中的this指向绑定事件的对象
+            //事件方法中的this指向绑定事件的对象
             var a = that.a.value;
             var b = that.b.value;
             var flag = that.flag.value;
